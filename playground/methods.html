@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- v-on이라는 디렉티브를 이용하여 버튼을 클릭했을때 해당 메서드를 연결해주세요~ -->
+        <button v-on:click="logText">Click Me.~!</button>
+        <input type="text" v-on:keyup.enter="logText">
+        
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+    <script>
+        new Vue({
+            el: '#app',
+            methods:{
+                logText: function(){
+                    console.log('clicked')
+                }
+            }
+        })
+    </script>
+</body>
+</html>
